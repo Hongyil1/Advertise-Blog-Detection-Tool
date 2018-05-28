@@ -104,7 +104,7 @@ def has_advertise(url):
 
     # Target words
     target_word = ["advertise", "media kit", "advertising", "promote with us", "advertise with us", "press kit",
-                   "press room", "press inquiries", "advertising inquiries", "enquiries"]
+                   "press room", "press inquiries", "advertising inquiries"]
 
     # break into lines and remove leading and trailing space on each, lowercase
     lines = [line.strip().lower() for line in web_text.splitlines() if 9 <= len(line.strip()) <= 21]
