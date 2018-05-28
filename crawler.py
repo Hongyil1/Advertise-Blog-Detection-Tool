@@ -33,7 +33,8 @@ def is_wordpress(url):
     # print(web_text)
 
     detect_text = "We haven't crawled"
-
+    
+    # The url has been detected before, use selenium to click the button
     if detect_text in web_text:
         # print("No detected")
         options = Options()
@@ -134,7 +135,7 @@ if __name__ == "__main__":
     size = comm.size
 
     if rank == 0:
-        for index in range(14, 21):
+        for index in range(1, 21):
             with open("target/target_{0}.csv".format(index), "w") as f:
                 writer = csv.DictWriter(f, ['url'])
                 writer.writeheader()
@@ -148,7 +149,7 @@ if __name__ == "__main__":
     else:
         time.sleep(1)
 
-    for index in range(14, 21):
+    for index in range(1, 21):
         start_time = time.time()
         target_list = []
         problem_list = []
